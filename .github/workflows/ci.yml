@@ -10,8 +10,8 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  codestyle:
-    name: Codestyle
+  codestyle-rust:
+    name: Codestyle (Rust)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -27,6 +27,15 @@ jobs:
           cargo clippy --workspace --all-targets --features sqlite -- -D warnings
           cargo clippy --workspace --all-targets --features postgres --exclude ui-tests -- -D warnings
           cargo clippy --workspace --all-targets --features mysql --exclude ui-tests -- -D warnings
+
+  codestyle-markdown:
+    name: Codestyle (Markdown)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Lint markdown
+        run: npx markdownlint-cli2
 
   test-postgres:
     name: Tests (PostgreSQL)

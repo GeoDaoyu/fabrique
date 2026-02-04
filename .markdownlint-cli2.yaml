@@ -1,0 +1,11 @@
+globs:
+  - "**/*.md"
+
+ignores:
+  - "target/**"
+  - "node_modules/**"
+
+# Override rules
+config:
+  # Allow multiple top-level headings in SUMMARY.md (mdBook convention)
+  MD025: false
