@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1](https://github.com/robinstraub/fabrique/compare/fabrique-core-v0.2.0...fabrique-core-v0.2.1) - 2026-02-06
+
+### Added
+
+- add type-safe column selection support ([#89](https://github.com/robinstraub/fabrique/pull/89))
+- add support for multiple backends ([#79](https://github.com/robinstraub/fabrique/pull/79))
+
+### Other
+
+- change query methods from executor to acquire ([#86](https://github.com/robinstraub/fabrique/pull/86))
+
 ## [0.2.0](https://github.com/robinstraub/fabrique/compare/fabrique-core-v0.1.1...fabrique-core-v0.2.0) - 2026-01-04
 
 ### Added
